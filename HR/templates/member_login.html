@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Member login</title>
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <div class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">MIS club</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="/index/">index</a></li>
+                <li> <a href="/about/">about us </a></li>
+                <li><a href="/company_login/">company</a></li>
+                <li class="active"><a href="/member_login/">student</a></li>
+                <li><a href="/job/">job</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- 登入 -->
+    <form action="/member_login_action/" method="POST">
+
+        <input type="text" name="username" placeholder="student name">
+        <input type="password" name="password">
+        <button type="submit">登入</button>
+        {% csrf_token %}
+    </form>
+    <br>
+    <input type="button" onclick="location.href='/member_signup/'" value="註冊">
+</body>
+
+</html>

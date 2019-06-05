@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <div class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">MIS club</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/index/">index</a></li>
+                <li> <a href="/about/">about us </a></li>
+                <li><a href="/company_login/">company</a></li>
+                <li><a href="/member_login/">student</a></li>
+                <li><a href="/job/">job</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- 工作內容 -->
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col" style="font-size: 30px;">工作名稱</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">{{ title }}</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>張貼時間：{{ postTime }}</th>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">工作內容</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td style="padding-left: 80px">
+                    {{ detail }}
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">工作性質</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td style="padding-left: 80px">
+                    {{ Type }}
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">工作條件</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td>
+                    {{ condition }}
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">員工福利</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td>
+                    {{ benefit }}
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">聯絡方式</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td>
+                    {{ contact }}
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>
